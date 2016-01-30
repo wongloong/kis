@@ -1,0 +1,35 @@
+<ehcache updateCheck="false">
+    <!--
+        name:cache唯一标识
+        eternal：缓存是否永久有效
+        maxElementsInMemory：内存中最大缓存对象数
+        overflowToDisk(true,false)：缓存对象达到最大数后，将缓存写到硬盘中
+        diskPersistent：硬盘持久化
+        timeToIdleSeconds：缓存清除时间
+        timeToLiveSeconds：缓存存活时间
+        memoryStoreEvictionPolicy：缓存清空策略
+        1.FIFO：first in first out 先讲先出
+        2.LFU： Less Frequently Used 一直以来最少被使用的
+        3.LRU：Least Recently Used  最近最少使用的
+    -->
+    <diskStore path="java.io.tmpdir/ehcache" />
+    <cache name="role"
+           eternal="false"
+           timeToIdleSeconds="3600"
+           timeToLiveSeconds="0"
+           overflowToDisk="true"
+           statistics="true"
+           memoryStoreEvictionPolicy="LRU">
+    </cache>
+    <!--<diskStore path="/home/yks/ehcache" />-->
+    <defaultCache maxElementsInMemory="10000" eternal="false"
+                  timeToIdleSeconds="300" timeToLiveSeconds="180" overflowToDisk="true"
+                  maxElementsOnDisk="10000000" diskPersistent="false"
+                  diskExpiryThreadIntervalSeconds="120" memoryStoreEvictionPolicy="LRU" />
+
+    <cache name="org.hibernate.cache.spi.UpdateTimestampsCache"
+           maxElementsInMemory="5000" eternal="true" overflowToDisk="true" />
+    <cache name="org.hibernate.cache.internal.StandardQueryCache"
+           maxElementsInMemory="10000" eternal="false" timeToLiveSeconds="120"
+           overflowToDisk="true" />
+</ehcache>

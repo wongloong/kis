@@ -1,0 +1,63 @@
+2016-01-30 15:46:32 [org.springframework.web.context.ContextLoader]-[INFO] Root WebApplicationContext: initialization started
+2016-01-30 15:46:32 [org.springframework.web.context.support.AnnotationConfigWebApplicationContext]-[INFO] Refreshing Root WebApplicationContext: startup date [Sat Jan 30 15:46:32 CST 2016]; root of context hierarchy
+2016-01-30 15:46:33 [org.springframework.web.context.support.AnnotationConfigWebApplicationContext]-[INFO] Registering annotated classes: [class AppConfig]
+2016-01-30 15:46:36 [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]-[INFO] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-01-30 15:46:38 [com.kis.tools.ReadTool]-[ERROR] 
+2016-01-30 15:46:40 [com.kis.tools.ReadTool]-[ERROR] 
+2016-01-30 15:46:41 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]-[INFO] Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Sat Jan 30 15:46:32 CST 2016]; root of context hierarchy
+2016-01-30 15:46:41 [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver]-[INFO] Detected @ExceptionHandler methods in globalExceptionHandler
+2016-01-30 15:46:42 [org.springframework.web.context.ContextLoader]-[ERROR] Context initialization failed
+java.lang.IllegalStateException: No CacheResolver specified, and no bean of type CacheManager found. Register a CacheManager bean or remove the @EnableCaching annotation from your configuration.
+	at org.springframework.cache.interceptor.CacheAspectSupport.afterSingletonsInstantiated(CacheAspectSupport.java:191)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:792)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:834)
+	at org.springframework.context.support.AbstractApplicationContext.__refresh(AbstractApplicationContext.java:537)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java)
+	at org.springframework.web.context.ContextLoader.configureAndRefreshWebApplicationContext(ContextLoader.java:446)
+	at org.springframework.web.context.ContextLoader.initWebApplicationContext(ContextLoader.java:328)
+	at org.springframework.web.context.ContextLoaderListener.contextInitialized(ContextLoaderListener.java:107)
+	at org.apache.catalina.core.StandardContext.listenerStart(StandardContext.java:4797)
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5291)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:150)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-01-30 15:46:42 [org.springframework.web.context.support.AnnotationConfigWebApplicationContext]-[INFO] Closing Root WebApplicationContext: startup date [Sat Jan 30 15:46:32 CST 2016]; root of context hierarchy
+2016-01-30 15:46:42 [org.springframework.web.context.support.AnnotationConfigWebApplicationContext]-[WARN] Exception thrown from LifecycleProcessor on context close
+java.lang.IllegalStateException: LifecycleProcessor not initialized - call 'refresh' before invoking lifecycle methods via the context: Root WebApplicationContext: startup date [Sat Jan 30 15:46:32 CST 2016]; root of context hierarchy
+	at org.springframework.context.support.AbstractApplicationContext.getLifecycleProcessor(AbstractApplicationContext.java:414)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:966)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:925)
+	at org.springframework.web.context.ContextLoader.closeWebApplicationContext(ContextLoader.java:583)
+	at org.springframework.web.context.ContextLoaderListener.contextDestroyed(ContextLoaderListener.java:116)
+	at org.apache.catalina.core.StandardContext.listenerStop(StandardContext.java:4837)
+	at org.apache.catalina.core.StandardContext.__stop(StandardContext.java:5483)
+	at org.apache.catalina.core.StandardContext.stopInternal(StandardContext.java)
+	at org.apache.catalina.util.LifecycleBase.stop(LifecycleBase.java:232)
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:160)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1559)
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1549)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+2016-01-30 15:49:25 [org.springframework.web.context.ContextLoader]-[INFO] Root WebApplicationContext: initialization started
+2016-01-30 15:49:25 [org.springframework.web.context.support.AnnotationConfigWebApplicationContext]-[INFO] Refreshing Root WebApplicationContext: startup date [Sat Jan 30 15:49:25 CST 2016]; root of context hierarchy
+2016-01-30 15:49:26 [org.springframework.web.context.support.AnnotationConfigWebApplicationContext]-[INFO] Registering annotated classes: [class AppConfig]
+2016-01-30 15:49:28 [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]-[INFO] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-01-30 15:49:31 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]-[INFO] Looking for @ControllerAdvice: Root WebApplicationContext: startup date [Sat Jan 30 15:49:25 CST 2016]; root of context hierarchy
+2016-01-30 15:49:31 [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver]-[INFO] Detected @ExceptionHandler methods in globalExceptionHandler
+2016-01-30 15:49:32 [org.springframework.web.context.ContextLoader]-[INFO] Root WebApplicationContext: initialization completed in 6766 ms
+2016-01-30 15:49:32 [org.springframework.web.servlet.DispatcherServlet]-[INFO] FrameworkServlet 'dispatcher': initialization started
+2016-01-30 15:49:32 [org.springframework.web.context.support.AnnotationConfigWebApplicationContext]-[INFO] Refreshing WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sat Jan 30 15:49:32 CST 2016]; parent: Root WebApplicationContext
+2016-01-30 15:49:32 [org.springframework.web.context.support.AnnotationConfigWebApplicationContext]-[INFO] Registering annotated classes: [class WebConfig,class GlobalExceptionHandler]
+2016-01-30 15:49:32 [org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]-[INFO] JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2016-01-30 15:49:32 [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]-[INFO] Mapped URL path [/static/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2016-01-30 15:49:32 [org.springframework.web.servlet.handler.SimpleUrlHandlerMapping]-[INFO] Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.DefaultServletHttpRequestHandler]
+2016-01-30 15:49:32 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter]-[INFO] Looking for @ControllerAdvice: WebApplicationContext for namespace 'dispatcher-servlet': startup date [Sat Jan 30 15:49:32 CST 2016]; parent: Root WebApplicationContext
+2016-01-30 15:49:32 [org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping]-[INFO] Mapped "{[/]}" onto public java.lang.String com.kis.controller.FirstController.TestCo()
+2016-01-30 15:49:32 [org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver]-[INFO] Detected @ExceptionHandler methods in globalExceptionHandler
+2016-01-30 15:49:32 [org.springframework.web.servlet.DispatcherServlet]-[INFO] FrameworkServlet 'dispatcher': initialization completed in 773 ms
